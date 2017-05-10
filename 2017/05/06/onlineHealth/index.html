@@ -1,0 +1,665 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="在线医疗系统在线医疗百科全书药物百科券时疾病百科全书用药指南&amp;amp;建议在线诊断系统自动化诊断在线医生诊断在线预约系统医院预约医生预约急救预约分析统计系统病历记录统计生理体征统计健康状态分析用药适用性分析新闻推送系统生活方式新闻锻炼健身新闻医学技术新闻健康计划健康提升建议健康提升菜谱健身／锻炼计划">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes">
+<meta property="og:url" content="http://yoursite.com/2017/05/06/onlineHealth/index.html">
+<meta property="og:site_name" content="Notes">
+<meta property="og:description" content="在线医疗系统在线医疗百科全书药物百科券时疾病百科全书用药指南&amp;amp;建议在线诊断系统自动化诊断在线医生诊断在线预约系统医院预约医生预约急救预约分析统计系统病历记录统计生理体征统计健康状态分析用药适用性分析新闻推送系统生活方式新闻锻炼健身新闻医学技术新闻健康计划健康提升建议健康提升菜谱健身／锻炼计划">
+<meta property="og:updated_time" content="2017-05-05T17:12:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes">
+<meta name="twitter:description" content="在线医疗系统在线医疗百科全书药物百科券时疾病百科全书用药指南&amp;amp;建议在线诊断系统自动化诊断在线医生诊断在线预约系统医院预约医生预约急救预约分析统计系统病历记录统计生理体征统计健康状态分析用药适用性分析新闻推送系统生活方式新闻锻炼健身新闻医学技术新闻健康计划健康提升建议健康提升菜谱健身／锻炼计划">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/06/onlineHealth/"/>
+
+
+
+
+
+  <title> | Notes</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/onlineHealth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yeon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-06T01:12:17+08:00">
+                2017-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="在线医疗系统"><a href="#在线医疗系统" class="headerlink" title="在线医疗系统"></a>在线医疗系统</h1><h2 id="在线医疗百科全书"><a href="#在线医疗百科全书" class="headerlink" title="在线医疗百科全书"></a>在线医疗百科全书</h2><h3 id="药物百科券时"><a href="#药物百科券时" class="headerlink" title="药物百科券时"></a>药物百科券时</h3><h3 id="疾病百科全书"><a href="#疾病百科全书" class="headerlink" title="疾病百科全书"></a>疾病百科全书</h3><h3 id="用药指南-amp-建议"><a href="#用药指南-amp-建议" class="headerlink" title="用药指南&amp;建议"></a>用药指南&amp;建议</h3><h2 id="在线诊断系统"><a href="#在线诊断系统" class="headerlink" title="在线诊断系统"></a>在线诊断系统</h2><h3 id="自动化诊断"><a href="#自动化诊断" class="headerlink" title="自动化诊断"></a>自动化诊断</h3><h3 id="在线医生诊断"><a href="#在线医生诊断" class="headerlink" title="在线医生诊断"></a>在线医生诊断</h3><h2 id="在线预约系统"><a href="#在线预约系统" class="headerlink" title="在线预约系统"></a>在线预约系统</h2><h3 id="医院预约"><a href="#医院预约" class="headerlink" title="医院预约"></a>医院预约</h3><h3 id="医生预约"><a href="#医生预约" class="headerlink" title="医生预约"></a>医生预约</h3><h3 id="急救预约"><a href="#急救预约" class="headerlink" title="急救预约"></a>急救预约</h3><h2 id="分析统计系统"><a href="#分析统计系统" class="headerlink" title="分析统计系统"></a>分析统计系统</h2><h3 id="病历记录统计"><a href="#病历记录统计" class="headerlink" title="病历记录统计"></a>病历记录统计</h3><h3 id="生理体征统计"><a href="#生理体征统计" class="headerlink" title="生理体征统计"></a>生理体征统计</h3><h3 id="健康状态分析"><a href="#健康状态分析" class="headerlink" title="健康状态分析"></a>健康状态分析</h3><h3 id="用药适用性分析"><a href="#用药适用性分析" class="headerlink" title="用药适用性分析"></a>用药适用性分析</h3><h2 id="新闻推送系统"><a href="#新闻推送系统" class="headerlink" title="新闻推送系统"></a>新闻推送系统</h2><h3 id="生活方式新闻"><a href="#生活方式新闻" class="headerlink" title="生活方式新闻"></a>生活方式新闻</h3><h3 id="锻炼健身新闻"><a href="#锻炼健身新闻" class="headerlink" title="锻炼健身新闻"></a>锻炼健身新闻</h3><h3 id="医学技术新闻"><a href="#医学技术新闻" class="headerlink" title="医学技术新闻"></a>医学技术新闻</h3><h2 id="健康计划"><a href="#健康计划" class="headerlink" title="健康计划"></a>健康计划</h2><h3 id="健康提升建议"><a href="#健康提升建议" class="headerlink" title="健康提升建议"></a>健康提升建议</h3><h3 id="健康提升菜谱"><a href="#健康提升菜谱" class="headerlink" title="健康提升菜谱"></a>健康提升菜谱</h3><h3 id="健身／锻炼计划"><a href="#健身／锻炼计划" class="headerlink" title="健身／锻炼计划"></a>健身／锻炼计划</h3>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/22/长尾理论/" rel="prev" title="长尾理论">
+                长尾理论 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Yeon" />
+          <p class="site-author-name" itemprop="name">Yeon</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在线医疗系统"><span class="nav-number">1.</span> <span class="nav-text">在线医疗系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在线医疗百科全书"><span class="nav-number">1.1.</span> <span class="nav-text">在线医疗百科全书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#药物百科券时"><span class="nav-number">1.1.1.</span> <span class="nav-text">药物百科券时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#疾病百科全书"><span class="nav-number">1.1.2.</span> <span class="nav-text">疾病百科全书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用药指南-amp-建议"><span class="nav-number">1.1.3.</span> <span class="nav-text">用药指南&建议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线诊断系统"><span class="nav-number">1.2.</span> <span class="nav-text">在线诊断系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动化诊断"><span class="nav-number">1.2.1.</span> <span class="nav-text">自动化诊断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在线医生诊断"><span class="nav-number">1.2.2.</span> <span class="nav-text">在线医生诊断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线预约系统"><span class="nav-number">1.3.</span> <span class="nav-text">在线预约系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#医院预约"><span class="nav-number">1.3.1.</span> <span class="nav-text">医院预约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#医生预约"><span class="nav-number">1.3.2.</span> <span class="nav-text">医生预约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#急救预约"><span class="nav-number">1.3.3.</span> <span class="nav-text">急救预约</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析统计系统"><span class="nav-number">1.4.</span> <span class="nav-text">分析统计系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#病历记录统计"><span class="nav-number">1.4.1.</span> <span class="nav-text">病历记录统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生理体征统计"><span class="nav-number">1.4.2.</span> <span class="nav-text">生理体征统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#健康状态分析"><span class="nav-number">1.4.3.</span> <span class="nav-text">健康状态分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用药适用性分析"><span class="nav-number">1.4.4.</span> <span class="nav-text">用药适用性分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新闻推送系统"><span class="nav-number">1.5.</span> <span class="nav-text">新闻推送系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生活方式新闻"><span class="nav-number">1.5.1.</span> <span class="nav-text">生活方式新闻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#锻炼健身新闻"><span class="nav-number">1.5.2.</span> <span class="nav-text">锻炼健身新闻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#医学技术新闻"><span class="nav-number">1.5.3.</span> <span class="nav-text">医学技术新闻</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#健康计划"><span class="nav-number">1.6.</span> <span class="nav-text">健康计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#健康提升建议"><span class="nav-number">1.6.1.</span> <span class="nav-text">健康提升建议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#健康提升菜谱"><span class="nav-number">1.6.2.</span> <span class="nav-text">健康提升菜谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#健身／锻炼计划"><span class="nav-number">1.6.3.</span> <span class="nav-text">健身／锻炼计划</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yeon</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
