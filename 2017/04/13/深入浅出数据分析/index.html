@@ -1,0 +1,850 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="产品设计," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="数据分析入门：分解数据概要 分解复杂问题 处理数据材料 基于数据做出决策  数据分析流程 确定问题-&amp;gt;分解数据-&amp;gt;评估结果-&amp;gt;制定决策  少女化妆品案例提出问题概念：分析当前事情的处境，试图估计原因，并提出问题   你所提出的任务“分析分析”可以理解为找出产品目前总销量相对目标销量有所差别的原因？ 找出上述原因，并作出相应调整这是我们提高销量的策略 我需要得到更加详细的关于制定目">
+<meta name="keywords" content="产品设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入浅出数据分析">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/深入浅出数据分析/index.html">
+<meta property="og:site_name" content="Notes">
+<meta property="og:description" content="数据分析入门：分解数据概要 分解复杂问题 处理数据材料 基于数据做出决策  数据分析流程 确定问题-&amp;gt;分解数据-&amp;gt;评估结果-&amp;gt;制定决策  少女化妆品案例提出问题概念：分析当前事情的处境，试图估计原因，并提出问题   你所提出的任务“分析分析”可以理解为找出产品目前总销量相对目标销量有所差别的原因？ 找出上述原因，并作出相应调整这是我们提高销量的策略 我需要得到更加详细的关于制定目">
+<meta property="og:updated_time" content="2017-05-13T10:40:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深入浅出数据分析">
+<meta name="twitter:description" content="数据分析入门：分解数据概要 分解复杂问题 处理数据材料 基于数据做出决策  数据分析流程 确定问题-&amp;gt;分解数据-&amp;gt;评估结果-&amp;gt;制定决策  少女化妆品案例提出问题概念：分析当前事情的处境，试图估计原因，并提出问题   你所提出的任务“分析分析”可以理解为找出产品目前总销量相对目标销量有所差别的原因？ 找出上述原因，并作出相应调整这是我们提高销量的策略 我需要得到更加详细的关于制定目">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/13/深入浅出数据分析/"/>
+
+
+
+
+
+  <title>深入浅出数据分析 | Notes</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/深入浅出数据分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yeon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">深入浅出数据分析</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-13T22:10:57+08:00">
+                2017-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据分析入门：分解数据"><a href="#数据分析入门：分解数据" class="headerlink" title="数据分析入门：分解数据"></a>数据分析入门：分解数据</h2><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><ul>
+<li>分解复杂问题</li>
+<li>处理数据材料</li>
+<li>基于数据做出决策</li>
+</ul>
+<h4 id="数据分析流程"><a href="#数据分析流程" class="headerlink" title="数据分析流程"></a>数据分析流程</h4><blockquote>
+<p>确定问题-&gt;分解数据-&gt;评估结果-&gt;制定决策</p>
+</blockquote>
+<h3 id="少女化妆品案例"><a href="#少女化妆品案例" class="headerlink" title="少女化妆品案例"></a>少女化妆品案例</h3><h4 id="提出问题"><a href="#提出问题" class="headerlink" title="提出问题"></a>提出问题</h4><p>概念：分析当前事情的处境，试图估计原因，并提出问题</p>
+<blockquote>
+<ul>
+<li>你所提出的任务“分析分析”可以理解为找出产品目前总销量相对目标销量有所差别的原因？</li>
+<li>找出上述原因，并作出相应调整这是我们提高销量的策略</li>
+<li>我需要得到更加详细的关于制定目标销量的数据</li>
+<li>我需要知道公司调整广告费和社会网络费投入的原因</li>
+</ul>
+<ul>
+<li>我需要了解单价变化的原因？</li>
+<li>我们的产品有何特点？</li>
+<li>我们的目标用户是谁？</li>
+<li>我们的竞争对手如何？</li>
+</ul>
+</blockquote>
+<p>&gt;</p>
+<ul>
+<li>您希望销量提高多少？</li>
+<li>您觉得我们怎样才能办到？</li>
+<li>您觉得销量提高多少是可行的，目标销量合理么？</li>
+<li>我们的竞争对手销量如何？</li>
+<li>广告和社会网络营销预算是怎么回事？</li>
+</ul>
+<h4 id="分解数据"><a href="#分解数据" class="headerlink" title="分解数据"></a>分解数据</h4><p>概念：将现有的资料最总成为可用的格式／形式</p>
+<ul>
+<li>原始数据表</li>
+<li>汇总数据表</li>
+<li><p>比较因子</p>
+</li>
+<li><p>客户的观点：</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>单一目标客户群体；</li>
+<li>社会网络营销改革效果不明朗；</li>
+<li>仍有很大市场潜力</li>
+<li>竞争对手实力强劲</li>
+</ul>
+</blockquote>
+<ul>
+<li>我的观点：</li>
+</ul>
+<blockquote>
+<ul>
+<li>二月份销量与上年九月略有上升，但提升较小</li>
+<li>当前销量和目标有较大差距，该趋势从十一月份开始</li>
+<li>降价策略收效甚微</li>
+<li>削减费用可能会影响公司的销售达标能力</li>
+</ul>
+</blockquote>
+<h4 id="评估组块"><a href="#评估组块" class="headerlink" title="评估组块"></a>评估组块</h4><p>概念：比较汇总表中的相关信息</p>
+<ul>
+<li><p>介入分析</p>
+<ul>
+<li>作出明确的假设</li>
+<li>以自己的信用为自己结论打赌</li>
+</ul>
+</li>
+<li><p>我的观点：</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>二月份销量与上年九月略有上升，但提升较小</li>
+<li>当前销量和目标有较大差距，该趋势从十一月份开始</li>
+<li>降价策略收效甚微</li>
+<li>削减费用可能会影响公司的销售达标能力</li>
+</ul>
+</blockquote>
+<h4 id="制定决策"><a href="#制定决策" class="headerlink" title="制定决策"></a>制定决策</h4><p>概念：根据评估结果作出决策</p>
+<ul>
+<li>确保自己的意见传到到位</li>
+<li>建议：</li>
+</ul>
+<blockquote>
+<ul>
+<li>针对少女消费者调整广告方案：调整到九月的营销方案</li>
+</ul>
+</blockquote>
+<h4 id="缺漏"><a href="#缺漏" class="headerlink" title="缺漏"></a>缺漏</h4><ul>
+<li>了解消费者对产品的看法<ul>
+<li>心智模型决定观察结果</li>
+<li>统计模型取决于心智模型</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>假设的市场和真实的市场构成存在偏差，所以我们需要持续地市场调研</p>
+</blockquote>
+<h2 id="实验：检验你的理论"><a href="#实验：检验你的理论" class="headerlink" title="实验：检验你的理论"></a>实验：检验你的理论</h2><h3 id="咖啡案例"><a href="#咖啡案例" class="headerlink" title="咖啡案例"></a>咖啡案例</h3><h4 id="确定问题"><a href="#确定问题" class="headerlink" title="确定问题"></a>确定问题</h4><ul>
+<li>着眼点</li>
+</ul>
+<blockquote>
+<p>现在的问题是：在经济萧条的情况下，咖啡销量大幅下滑的原因。</p>
+</blockquote>
+<p>&gt;</p>
+<ul>
+<li>会见首席执行官，弄清楚星巴士如何进行商务运营：了解公司运营策略</li>
+<li>进行一次客户调查，弄清楚客户的想法：了解用户对产品的看法</li>
+<li>弄清楚目标销量如何计算：了解目标制定方式</li>
+<li>会见董事长：不合适的咨询对象</li>
+</ul>
+<h4 id="市场调查"><a href="#市场调查" class="headerlink" title="市场调查"></a>市场调查</h4><ul>
+<li>随机调查</li>
+<li>比较法<ul>
+<li>平均值</li>
+</ul>
+</li>
+<li>观察研究法</li>
+</ul>
+<blockquote>
+<p>汇总表中，只有咖啡价值一项数据在不断下降，而其他数据都在不断波动。消费者对咖啡价值的不断看低意味着消费者购买意愿的下降，因此影响了咖啡的销售情况。</p>
+</blockquote>
+<ul>
+<li>混杂因素</li>
+</ul>
+<blockquote>
+<p>本例中，店址对于咖啡销量有巨大影响。位于富人区的消费者有较强消费能力，咖啡价值几无变化，对消费者购买意愿毫无影响。和平均分布很不一致。</p>
+</blockquote>
+<h4 id="分解数据-1"><a href="#分解数据-1" class="headerlink" title="分解数据"></a>分解数据</h4><ul>
+<li>拆分数据块<ul>
+<li>同质性</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>将所有富人区拆分出来汇总后可以发现：不同于东岸区分店和西雅图分店<em>咖啡价值</em>一项直线下滑，富人区该项保持平稳。假设得到验证，公司需要针对<em>咖啡价值</em>作出改善</p>
+</blockquote>
+<h2 id="最优化：寻找最大值"><a href="#最优化：寻找最大值" class="headerlink" title="最优化：寻找最大值"></a>最优化：寻找最大值</h2><h2 id="图形化：更加用户友好"><a href="#图形化：更加用户友好" class="headerlink" title="图形化：更加用户友好"></a>图形化：更加用户友好</h2><h2 id="假设检验：假设并非如此"><a href="#假设检验：假设并非如此" class="headerlink" title="假设检验：假设并非如此"></a>假设检验：假设并非如此</h2><h2 id="贝叶斯统计"><a href="#贝叶斯统计" class="headerlink" title="贝叶斯统计"></a>贝叶斯统计</h2><h2 id="主观概率"><a href="#主观概率" class="headerlink" title="主观概率"></a>主观概率</h2><h2 id="启发法"><a href="#启发法" class="headerlink" title="启发法"></a>启发法</h2><h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><h2 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h2><h2 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h2><h2 id="关系数据库"><a href="#关系数据库" class="headerlink" title="关系数据库"></a>关系数据库</h2><h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2>
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/Users/yeyeon/notes/themes/next/source/images/qrcode_for_gh_d7f19161a0aa_430.jpg" alt="Yeon wechat" style="width: 200px; max-width: 100%;"/>
+    <div>关注遍历電</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品设计/" rel="tag"># 产品设计</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/22/长尾理论/" rel="next" title="长尾理论笔记">
+                <i class="fa fa-chevron-left"></i> 长尾理论笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/12/web设计笔记/" rel="prev" title="Web用户体验解构">
+                Web用户体验解构 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Yeon" />
+          <p class="site-author-name" itemprop="name">Yeon</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分析入门：分解数据"><span class="nav-text">数据分析入门：分解数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概要"><span class="nav-text">概要</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据分析流程"><span class="nav-text">数据分析流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#少女化妆品案例"><span class="nav-text">少女化妆品案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#提出问题"><span class="nav-text">提出问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分解数据"><span class="nav-text">分解数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评估组块"><span class="nav-text">评估组块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#制定决策"><span class="nav-text">制定决策</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺漏"><span class="nav-text">缺漏</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验：检验你的理论"><span class="nav-text">实验：检验你的理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#咖啡案例"><span class="nav-text">咖啡案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#确定问题"><span class="nav-text">确定问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#市场调查"><span class="nav-text">市场调查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分解数据-1"><span class="nav-text">分解数据</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最优化：寻找最大值"><span class="nav-text">最优化：寻找最大值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图形化：更加用户友好"><span class="nav-text">图形化：更加用户友好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#假设检验：假设并非如此"><span class="nav-text">假设检验：假设并非如此</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贝叶斯统计"><span class="nav-text">贝叶斯统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主观概率"><span class="nav-text">主观概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启发法"><span class="nav-text">启发法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直方图"><span class="nav-text">直方图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回归"><span class="nav-text">回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#误差"><span class="nav-text">误差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系数据库"><span class="nav-text">关系数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整理数据"><span class="nav-text">整理数据</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yeon</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
